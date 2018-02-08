@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +46,12 @@
   <ItemGroup>
     <Compile Include="Booked.cs" />
     <Compile Include="Booking.cs" />
+    <Compile Include="BookingApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingApp.Designer.cs">
+      <DependentUpon>BookingApp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Gymsession.cs" />
@@ -52,6 +60,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BookingApp.resx">
+      <DependentUpon>BookingApp.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
