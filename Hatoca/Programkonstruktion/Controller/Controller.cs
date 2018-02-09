@@ -8,5 +8,8 @@ namespace Hatoca
 {
 	class Controller
 	{
+
+		// public Customer GetCustomer(string cpnr) { }
+
 	}
 }

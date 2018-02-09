@@ -44,19 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Booked.cs" />
-    <Compile Include="Booking.cs" />
+    <Compile Include="Programkonstruktion\Model\Booked.cs" />
+    <Compile Include="Programkonstruktion\Model\Booking.cs" />
     <Compile Include="BookingApp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookingApp.Designer.cs">
       <DependentUpon>BookingApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Gymsession.cs" />
-    <Compile Include="Instructor.cs" />
+    <Compile Include="Programkonstruktion\Controller\Controller.cs" />
+    <Compile Include="Programkonstruktion\Model\Customer.cs" />
+    <Compile Include="Programkonstruktion\DAL\DataAccessLayer.cs" />
+    <Compile Include="Programkonstruktion\Model\Gymsession.cs" />
+    <Compile Include="Programkonstruktion\Model\Instructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Programkonstruktion\DAL\Queries.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -66,5 +68,6 @@
       <DependentUpon>BookingApp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
