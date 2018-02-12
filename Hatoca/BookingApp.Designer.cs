@@ -55,24 +55,38 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.Uppgift2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -111,11 +125,13 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1159, 552);
+            this.tabControl1.Size = new System.Drawing.Size(1257, 552);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.listBox1);
             this.tabPage3.Controls.Add(this.textBox7);
             this.tabPage3.Controls.Add(this.textBox6);
             this.tabPage3.Controls.Add(this.label8);
@@ -138,7 +154,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1151, 519);
+            this.tabPage3.Size = new System.Drawing.Size(1249, 519);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -146,14 +162,14 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(1038, 225);
+            this.textBox7.Location = new System.Drawing.Point(1038, 240);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(117, 26);
             this.textBox7.TabIndex = 18;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(915, 225);
+            this.textBox6.Location = new System.Drawing.Point(915, 240);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(117, 26);
             this.textBox6.TabIndex = 17;
@@ -162,7 +178,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1083, 198);
+            this.label8.Location = new System.Drawing.Point(1074, 207);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 24);
             this.label8.TabIndex = 16;
@@ -172,7 +188,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(932, 198);
+            this.label7.Location = new System.Drawing.Point(924, 207);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 24);
             this.label7.TabIndex = 15;
@@ -217,7 +233,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightCoral;
-            this.button4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(168, 296);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 34);
@@ -228,7 +244,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightCoral;
-            this.button3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(306, 240);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 34);
@@ -239,7 +255,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LightCoral;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(168, 240);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 34);
@@ -250,7 +266,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightCoral;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(31, 240);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 34);
@@ -311,8 +327,31 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Session ID* ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Session Information";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.textBox14);
+            this.tabPage4.Controls.Add(this.textBox13);
+            this.tabPage4.Controls.Add(this.button9);
+            this.tabPage4.Controls.Add(this.label18);
+            this.tabPage4.Controls.Add(this.label17);
+            this.tabPage4.Controls.Add(this.listBox3);
+            this.tabPage4.Controls.Add(this.label16);
+            this.tabPage4.Controls.Add(this.label15);
+            this.tabPage4.Controls.Add(this.listBox2);
+            this.tabPage4.Controls.Add(this.button8);
+            this.tabPage4.Controls.Add(this.button7);
+            this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Controls.Add(this.label14);
             this.tabPage4.Controls.Add(this.textBox12);
             this.tabPage4.Controls.Add(this.textBox11);
@@ -327,11 +366,107 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1151, 519);
+            this.tabPage4.Size = new System.Drawing.Size(1249, 519);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Member information";
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(18, 22);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(188, 29);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Member Information";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(562, 111);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(253, 26);
+            this.textBox12.TabIndex = 15;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(562, 68);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(253, 26);
+            this.textBox11.TabIndex = 14;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(132, 157);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(253, 26);
+            this.textBox10.TabIndex = 13;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(132, 111);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(253, 26);
+            this.textBox9.TabIndex = 12;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(132, 64);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(253, 26);
+            this.textBox8.TabIndex = 11;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(420, 111);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(118, 24);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "E-mail address";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(420, 64);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(114, 24);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Telephone nbr";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(19, 157);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 24);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Address";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(19, 113);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 24);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Name";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(19, 68);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 24);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Pnr* ";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // tabPage2
             // 
@@ -385,112 +520,144 @@
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // listBox1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 68);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 24);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Pnr* ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(486, 23);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(402, 444);
+            this.listBox1.TabIndex = 19;
             // 
-            // label10
+            // button5
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(19, 102);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 24);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Name";
+            this.button5.BackColor = System.Drawing.Color.LightCoral;
+            this.button5.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(1002, 296);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(113, 32);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "Book";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // label11
+            // button6
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 138);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 24);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Address";
+            this.button6.BackColor = System.Drawing.Color.LightCoral;
+            this.button6.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(852, 64);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(255, 30);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Add Customer";
+            this.button6.UseVisualStyleBackColor = false;
             // 
-            // label12
+            // button7
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(19, 173);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(114, 24);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Telephone nbr";
+            this.button7.BackColor = System.Drawing.Color.LightCoral;
+            this.button7.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(852, 109);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(255, 33);
+            this.button7.TabIndex = 18;
+            this.button7.Text = "Delete Customer";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // label13
+            // button8
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(19, 205);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 24);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "E-mail address";
+            this.button8.BackColor = System.Drawing.Color.LightCoral;
+            this.button8.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(852, 157);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(255, 33);
+            this.button8.TabIndex = 19;
+            this.button8.Text = "Search Customer";
+            this.button8.UseVisualStyleBackColor = false;
             // 
-            // textBox8
+            // listBox2
             // 
-            this.textBox8.Location = new System.Drawing.Point(194, 66);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(117, 26);
-            this.textBox8.TabIndex = 11;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(62, 230);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(455, 164);
+            this.listBox2.TabIndex = 20;
             // 
-            // textBox9
+            // label15
             // 
-            this.textBox9.Location = new System.Drawing.Point(194, 102);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(117, 26);
-            this.textBox9.TabIndex = 12;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(57, 198);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(183, 29);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Upcoming sessions";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
-            // textBox10
+            // label16
             // 
-            this.textBox10.Location = new System.Drawing.Point(194, 138);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(117, 26);
-            this.textBox10.TabIndex = 13;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(557, 198);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(171, 29);
+            this.label16.TabIndex = 23;
+            this.label16.Text = "Previous sessions";
             // 
-            // textBox11
+            // listBox3
             // 
-            this.textBox11.Location = new System.Drawing.Point(194, 173);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(117, 26);
-            this.textBox11.TabIndex = 14;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 20;
+            this.listBox3.Location = new System.Drawing.Point(562, 230);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(455, 164);
+            this.listBox3.TabIndex = 25;
             // 
-            // textBox12
+            // label17
             // 
-            this.textBox12.Location = new System.Drawing.Point(194, 205);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(117, 26);
-            this.textBox12.TabIndex = 15;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(420, 427);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(100, 24);
+            this.label17.TabIndex = 27;
+            this.label17.Text = "Session ID* ";
             // 
-            // label1
+            // label18
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Session Information";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(19, 431);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(46, 24);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Pnr* ";
             // 
-            // label14
+            // button9
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(18, 22);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(188, 29);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Member Information";
+            this.button9.BackColor = System.Drawing.Color.LightCoral;
+            this.button9.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(852, 426);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(255, 30);
+            this.button9.TabIndex = 29;
+            this.button9.Text = "Cancel Reservation";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(132, 427);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(253, 26);
+            this.textBox13.TabIndex = 30;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(562, 429);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(253, 26);
+            this.textBox14.TabIndex = 31;
             // 
             // BookingApp
             // 
@@ -555,5 +722,19 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Label label16;
     }
 }
