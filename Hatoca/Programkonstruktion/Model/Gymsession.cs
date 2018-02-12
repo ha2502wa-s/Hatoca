@@ -13,6 +13,7 @@ namespace Hatoca
 		private string gplace;
 		private int gtime;
 		private int gmaximumSpots;
+        private string instructor;
 
 		public int Gid
 		{
@@ -44,5 +45,12 @@ namespace Hatoca
 			set { gmaximumSpots = value; }
 		}
 
-	}
+        public string Instructor
+        {
+            get { return instructor; }
+            set { instructor = value; }
+        }
+
+    }
 }
+    
