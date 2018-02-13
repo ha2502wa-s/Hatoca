@@ -86,5 +86,15 @@ namespace Hatoca
         {
 
         }
+
+        private void Text_Spots_SesInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Text_Address_MembInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
