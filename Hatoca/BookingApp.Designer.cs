@@ -156,7 +156,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1249, 519);
             this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Session Information";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
@@ -478,7 +478,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1256, 551);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Uppgift 2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabControl2
@@ -498,7 +498,7 @@
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(1148, 514);
             this.tabPage6.TabIndex = 0;
-            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.Text = "Uppgift 2 del 1 ";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // tabPage7
@@ -519,7 +519,7 @@
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(1256, 551);
             this.tabPage5.TabIndex = 2;
-            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.Text = "Uppgift 3";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // listBox1
