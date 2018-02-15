@@ -51,7 +51,7 @@ namespace Hatoca
         }
         public String AllSessions()
         {
-            return "SELECT UPPER (gid) AS Session ID, UPPER (gTitle) AS Title, UPPER (gPlace) AS Place, UPPER (gTime) AS Time, UPPER (gmax_spots) as Spots FROM Session"
+            return "SELECT UPPER (gid) AS Session ID, UPPER (gTitle) AS Title, UPPER (gPlace) AS Place, UPPER (gTime) AS Time, UPPER (gmax_spots) as Spots FROM Session";
         }
 
 
