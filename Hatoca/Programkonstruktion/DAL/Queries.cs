@@ -8,34 +8,51 @@ namespace Hatoca
 {
 	public class Queries
 	{
-		public string getCustomer()
+		public String GetCustomer()
 		{
-			return "select * from Customer where cpnr = ? ";
+			return "SELECT * FROM Customer WHERE cpnr = ? ";
 		}
 
-		public string getCustomerToTable() {
-			return "select cpnr as 'Customer pnr' upper(cname) as 'Name', " + "upper(caddress) as 'Address' from Customer where cpnr = ?";
+		public String GetCustomerToTable() {
+			return "SELECT cpnr AS 'Customer pnr' UPPER (cname) AS 'Name', " + "UPPER(caddress) AS 'Address' FROM Customer WHERE cpnr = ?";
 		}
 		
-		public string getGymsession()
+		public String GetGymsession()
 		{
-			return "select * from Gymsession where gid = ?";
+			return "SELECT * FROM Gymsession WHERE gid = ?";
 		}
 
-		public string getInstructor()
+		public String GetInstructor()
 		{
-			return "select * from Instructor where iid = ?";
+			return "SELECT * FROM Instructor WHERE iid = ?";
 		}
 
-		public string addCustomer()
+		public String AddCustomer()
 		{
-			return "insert into Customer values (?,?,?,?,?)";
+			return "INSERT INTO Customer VALUES (?,?,?,?,?)";
 		}
 
-		public string addGymsession()
+		public String AddGymsession()
 		{
-			return "insert into Gymsession values (?,?,?,?,?)";
+			return "INSERT INTO Gymsession VALUES (?,?,?,?,?)";
 		}
+
+        public String DeleteGymsession()
+        {
+            return "DELETE FROM Gymsession WHERE gid = ?";
+        }
+        public String DeleteCustomer()
+        {
+            return "DELETE FROM Customer WHERE cpnr = ?";
+        }
+        public String BookSession()
+        {
+            return "INSERT INTO book VALUES (?,?)";
+        }
+        public String AllSessions()
+        {
+            return "SELECT UPPER (gid) AS Session ID, UPPER (gTitle) AS Title, UPPER (gPlace) AS Place, UPPER (gTime) AS Time, UPPER (gmax_spots) as Spots FROM Session";
+        }
 
 
 
