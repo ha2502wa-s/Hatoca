@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="hatoca_inlamningModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="cpnr" />
+            <PropertyRef Name="gid" />
+          </Key>
+          <Property Name="cpnr" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="gid" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="bdate" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="btime" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Booked">
+          <Key>
+            <PropertyRef Name="cpnr" />
+            <PropertyRef Name="gid" />
+          </Key>
+          <Property Name="cpnr" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="gid" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="bdate" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="btime" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="cpnr" />
+          </Key>
+          <Property Name="cpnr" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="cname" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="caddress" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ctel" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="cmail" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gymsession">
+          <Key>
+            <PropertyRef Name="gid" />
+          </Key>
+          <Property Name="gid" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="gtitle" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="gplace" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="gtime" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="gmax_spots" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ginstructor" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BookCpnr">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="cpnr" />
+            </Principal>
+            <Dependent Role="Book">
+              <PropertyRef Name="cpnr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookedCpnr">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Booked" Type="Self.Booked" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="cpnr" />
+            </Principal>
+            <Dependent Role="Booked">
+              <PropertyRef Name="cpnr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookedGid">
+          <End Role="Gymsession" Type="Self.Gymsession" Multiplicity="1" />
+          <End Role="Booked" Type="Self.Booked" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gymsession">
+              <PropertyRef Name="gid" />
+            </Principal>
+            <Dependent Role="Booked">
+              <PropertyRef Name="gid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookGid">
+          <End Role="Gymsession" Type="Self.Gymsession" Multiplicity="1" />
+          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gymsession">
+              <PropertyRef Name="gid" />
+            </Principal>
+            <Dependent Role="Book">
+              <PropertyRef Name="gid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="hatoca_inlamningModelStoreContainer">
+          <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Booked" EntityType="Self.Booked" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gymsession" EntityType="Self.Gymsession" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BookCpnr" Association="Self.FK_BookCpnr">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Book" EntitySet="Book" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookedCpnr" Association="Self.FK_BookedCpnr">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Booked" EntitySet="Booked" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookedGid" Association="Self.FK_BookedGid">
+            <End Role="Gymsession" EntitySet="Gymsession" />
+            <End Role="Booked" EntitySet="Booked" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookGid" Association="Self.FK_BookGid">
+            <End Role="Gymsession" EntitySet="Gymsession" />
+            <End Role="Book" EntitySet="Book" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hatoca_inlamningModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="cpnr" />
+            <PropertyRef Name="gid" />
+          </Key>
+          <Property Name="cpnr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="bdate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="btime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_BookCpnr" FromRole="Book" ToRole="Customer" />
+          <NavigationProperty Name="Gymsession" Relationship="Self.FK_BookGid" FromRole="Book" ToRole="Gymsession" />
+        </EntityType>
+        <EntityType Name="Booked">
+          <Key>
+            <PropertyRef Name="cpnr" />
+            <PropertyRef Name="gid" />
+          </Key>
+          <Property Name="cpnr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="bdate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="btime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_BookedCpnr" FromRole="Booked" ToRole="Customer" />
+          <NavigationProperty Name="Gymsession" Relationship="Self.FK_BookedGid" FromRole="Booked" ToRole="Gymsession" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="cpnr" />
+          </Key>
+          <Property Name="cpnr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="caddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ctel" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cmail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Books" Relationship="Self.FK_BookCpnr" FromRole="Customer" ToRole="Book" />
+          <NavigationProperty Name="Bookeds" Relationship="Self.FK_BookedCpnr" FromRole="Customer" ToRole="Booked" />
+        </EntityType>
+        <EntityType Name="Gymsession">
+          <Key>
+            <PropertyRef Name="gid" />
+          </Key>
+          <Property Name="gid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gplace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gtime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gmax_spots" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ginstructor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Books" Relationship="Self.FK_BookGid" FromRole="Gymsession" ToRole="Book" />
+          <NavigationProperty Name="Bookeds" Relationship="Self.FK_BookedGid" FromRole="Gymsession" ToRole="Booked" />
+        </EntityType>
+        <Association Name="FK_BookCpnr">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="cpnr" />
+            </Principal>
+            <Dependent Role="Book">
+              <PropertyRef Name="cpnr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookGid">
+          <End Role="Gymsession" Type="Self.Gymsession" Multiplicity="1" />
+          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gymsession">
+              <PropertyRef Name="gid" />
+            </Principal>
+            <Dependent Role="Book">
+              <PropertyRef Name="gid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookedCpnr">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Booked" Type="Self.Booked" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="cpnr" />
+            </Principal>
+            <Dependent Role="Booked">
+              <PropertyRef Name="cpnr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookedGid">
+          <End Role="Gymsession" Type="Self.Gymsession" Multiplicity="1" />
+          <End Role="Booked" Type="Self.Booked" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gymsession">
+              <PropertyRef Name="gid" />
+            </Principal>
+            <Dependent Role="Booked">
+              <PropertyRef Name="gid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="hatoca_inlamningEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Books" EntityType="Self.Book" />
+          <EntitySet Name="Bookeds" EntityType="Self.Booked" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Gymsessions" EntityType="Self.Gymsession" />
+          <AssociationSet Name="FK_BookCpnr" Association="Self.FK_BookCpnr">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Book" EntitySet="Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookGid" Association="Self.FK_BookGid">
+            <End Role="Gymsession" EntitySet="Gymsessions" />
+            <End Role="Book" EntitySet="Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookedCpnr" Association="Self.FK_BookedCpnr">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Booked" EntitySet="Bookeds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookedGid" Association="Self.FK_BookedGid">
+            <End Role="Gymsession" EntitySet="Gymsessions" />
+            <End Role="Booked" EntitySet="Bookeds" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hatoca_inlamningModelStoreContainer" CdmEntityContainer="hatoca_inlamningEntities">
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="hatoca_inlamningModel.Book">
+              <MappingFragment StoreEntitySet="Book">
+                <ScalarProperty Name="cpnr" ColumnName="cpnr" />
+                <ScalarProperty Name="gid" ColumnName="gid" />
+                <ScalarProperty Name="bdate" ColumnName="bdate" />
+                <ScalarProperty Name="btime" ColumnName="btime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bookeds">
+            <EntityTypeMapping TypeName="hatoca_inlamningModel.Booked">
+              <MappingFragment StoreEntitySet="Booked">
+                <ScalarProperty Name="cpnr" ColumnName="cpnr" />
+                <ScalarProperty Name="gid" ColumnName="gid" />
+                <ScalarProperty Name="bdate" ColumnName="bdate" />
+                <ScalarProperty Name="btime" ColumnName="btime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="hatoca_inlamningModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="cpnr" ColumnName="cpnr" />
+                <ScalarProperty Name="cname" ColumnName="cname" />
+                <ScalarProperty Name="caddress" ColumnName="caddress" />
+                <ScalarProperty Name="ctel" ColumnName="ctel" />
+                <ScalarProperty Name="cmail" ColumnName="cmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gymsessions">
+            <EntityTypeMapping TypeName="hatoca_inlamningModel.Gymsession">
+              <MappingFragment StoreEntitySet="Gymsession">
+                <ScalarProperty Name="gid" ColumnName="gid" />
+                <ScalarProperty Name="gtitle" ColumnName="gtitle" />
+                <ScalarProperty Name="gplace" ColumnName="gplace" />
+                <ScalarProperty Name="gtime" ColumnName="gtime" />
+                <ScalarProperty Name="gmax_spots" ColumnName="gmax_spots" />
+                <ScalarProperty Name="ginstructor" ColumnName="ginstructor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
